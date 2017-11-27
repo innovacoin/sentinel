@@ -1,2 +1,8 @@
 .idea
 .DS_Store
+.keep
+# ignore everything in ignore/
+ignore/
+
+# SQLite databases
+database/*.db
