@@ -3,6 +3,23 @@
 .keep
 # ignore everything in ignore/
 ignore/
-
+.gitignore
 # SQLite databases
 database/*.db
+.cache/
+lib/__pycache__/
+lib/base58.pyc
+lib/config.pyc
+lib/governance_class.pyc
+lib/init.pyc
+lib/innova_config.pyc
+lib/innovad.pyc
+lib/innovalib.pyc
+lib/masternode.pyc
+lib/misc.pyc
+lib/models.pyc
+lib/scheduler.pyc
+test/integration/__pycache__/
+test/unit/__pycache__/
+test/unit/models/__pycache__/
+venv/
