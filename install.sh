@@ -48,9 +48,15 @@ sudo apt-get install -y virtualenv
 virtualenv venv
 venv/bin/pip install -r requirements.txt
 echo "innova_conf=/root/.innovacore/innova.conf" >> /root/.innovacore/sentinel/sentinel.conf
+#get mnchecker
+cd /root
+sudo git clone https://github.com/innovacointeam/mnchecker /root/mnchecker
+#setup cron
 crontab -l > tempcron
-echo "* * * * * cd /root/.innovacore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log" >> tempcron
+echo "* * * * * cd /root/.innovacore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log" > tempcron
+echo "*/30 * * * * cd /root/mnchecker && ./mnchecker --currency-handle=\"innova\" --currency-bin-cli=\"innova-cli\" --currency-datadir=\"/root/.innovacore\" &> mnchecker-cron.log" >> tempcron
 crontab tempcron
 rm tempcron
+#set masternodeprivkey
 echo "Masternode private key: $masternodekey"
 echo "Job completed successfully"
