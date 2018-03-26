@@ -54,7 +54,7 @@ sudo git clone https://github.com/innovacointeam/mnchecker /root/mnchecker
 #setup cron
 crontab -l > tempcron
 echo "* * * * * cd /root/.innovacore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log" > tempcron
-echo "*/30 * * * * cd /root/mnchecker && ./mnchecker --currency-handle=\"innova\" --currency-bin-cli=\"innova-cli\" --currency-datadir=\"/root/.innovacore\" &> mnchecker-cron.log" >> tempcron
+echo "*/30 * * * * /root/mnchecker/mnchecker --currency-handle=\"innova\" --currency-bin-cli=\"innova-cli\" --currency-datadir=\"/root/.innovacore\" > /root/mnchecker/mnchecker-cron.log 2>&1" >> tempcron
 crontab tempcron
 rm tempcron
 #set masternodeprivkey
