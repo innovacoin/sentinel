@@ -37,6 +37,7 @@ echo "*/30 * * * * /root/mnchecker/mnchecker --currency-handle=\"innova\" --curr
 crontab tempcron
 rm tempcron
 #set masternodeprivkey
+clear
 NODEIP=$(curl -s4 icanhazip.com)
 echo "VPS ip: $NODEIP"
 echo "Masternode private key: $masternodekey"
