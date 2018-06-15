@@ -8,6 +8,7 @@ mkdir /root/.innovacore
 cd /root/innova
 wget -q $COIN
 tar xvzf linux_x64.tar.gz
+cp innova* /usr/local/bin
 sudo apt-get install -y pwgen
 GEN_PASS=`pwgen -1 20 -n`
 echo -e "rpcuser=innovauser\nrpcpassword=${GEN_PASS}\nrpcport=14519\nport=14520\nlisten=1\nmaxconnections=256" > /root/.innovacore/innova.conf
