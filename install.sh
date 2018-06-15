@@ -6,7 +6,7 @@ sudo apt-get update -y
 mkdir /root/innova
 mkdir /root/.innovacore
 cd /root/innova
-wget -q $COIN
+wget $COIN
 tar xvzf linux_x64.tar.gz
 cp innova* /usr/local/bin
 sudo apt-get install -y pwgen
