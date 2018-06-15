@@ -16,4 +16,4 @@ cd /root/innova
 sleep 10
 clear
 innova-cli getinfo
-echo "If you can see wallet version 120110, the update is completed successfully"
+echo "If you can see wallet version 120110, then the update is completed successfully"
