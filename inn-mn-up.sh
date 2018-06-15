@@ -6,12 +6,14 @@ rm -rf /usr/bin/innova*
 rm -rf /usr/bin/loca/innova*
 cd /root/innova
 ./innova-cli stop
-rm -rf /root/innova/innova*
+rm -rf /root/innova/inno*
+rm -rf /root/innova/linux*
 wget $COIN
 tar xvzf linux_x64.tar.gz
 cp innova* /usr/local/bin
 cd /root/innova
 ./innovad -daemon
 sleep 10
+clear
 innova-cli getinfo
-echo "Job completed successfully"
+echo "If you can see wallet version 120110, the update is completed successfully"
