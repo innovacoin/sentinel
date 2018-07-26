@@ -3,7 +3,7 @@ COIN='https://github.com/innovacoin/innova/releases/download/12.1.10/linux_x64.t
 
 innova-cli stop
 rm -rf /usr/bin/innova*
-rm -rf /usr/bin/loca/innova*
+rm -rf /usr/bin/local/innova*
 cd /root/innova
 ./innova-cli stop
 rm -rf /root/innova/inno*
