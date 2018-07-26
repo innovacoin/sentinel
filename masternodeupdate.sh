@@ -12,7 +12,7 @@ wget $COIN
 tar xvzf linux_x64.tar.gz
 cp innova* /usr/local/bin
 cd /root/innova
-./innovad -daemon
+./innovad -daemon -reindex
 sleep 10
 clear
 innova-cli getinfo
